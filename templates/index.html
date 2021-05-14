@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Shares</th>
+            <th>price</th>
+            <th>Total</th>
+        </tr>
+
+        {% for i in range(table) %}
+        <tr>
+            <td>{{symbol[i]}}</td>
+            <td>{{name[i]}}</td>
+            <td>{{shares[i]}}</td>
+            <td>{{price[i]}}</td>
+            <td>{{total[i]}}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <th>Subtotal</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{subtotal}}</td>
+        </tr>
+
+
+
+    </table>
+
+{% endblock %}
